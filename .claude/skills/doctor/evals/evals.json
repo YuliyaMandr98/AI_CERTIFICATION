@@ -1,0 +1,30 @@
+{
+  "skill_name": "doctor",
+  "note": "Wiring self-test. Evals 2-4 require temporarily breaking a config on purpose; restore it afterwards (git checkout). Hooks install unprefixed (git-guard.py); qa-cert appears only in sandbox/artifact names.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "check the setup",
+      "expected_output": "Runs python3 .claude/skills/doctor/scripts/doctor.py rather than reading config files and reasoning about them; repeats FAIL/WARN lines verbatim with their runbook commands; then performs the session-only step — names the live mcp__ tools it compared against allow/deny and states which of the three cases it found; fixes nothing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "doctor",
+      "expected_output": "Same run. On a fully green report it says so in one or two lines and does not invent follow-up work; does not add a RETRO entry for a green run.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "doctor says the deny list points at a dead server name — fix it",
+      "expected_output": "Does NOT rewrite the deny list on its own initiative from the report alone; here the user asked explicitly, so it may fix it — but first gets the real server name from `claude mcp list` output rather than guessing (the guess is what caused the original incident), and re-runs the doctor to prove the fix.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "the guard did not block a git push just now, what is going on",
+      "expected_output": "Runs the doctor (and/or python3 .claude/hooks/test_git_guard.py) instead of reading the guard hook source and speculating; states which installed PUSH_POLICY contract lost its mechanic (never = human-only, on-request = Claude prompt / Codex block, auto = plain publication allowed but destructive push still blocked); hands over the runbook command; recommends not starting a ticket until green.",
+      "files": []
+    }
+  ]
+}

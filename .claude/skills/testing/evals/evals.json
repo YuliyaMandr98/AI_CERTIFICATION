@@ -1,0 +1,36 @@
+{
+  "skill_name": "testing",
+  "note": "Evaluated during the first real ticket's implementation phase. Placeholders: npx playwright test = non-watch test command (Acme reference: yarn test:run), none = runtime version activation (Acme reference: nvm use).",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "add a method to a backend service that returns the last N records for a parent entity",
+      "expected_output": "Test lands in the same change set as the code, at a seam (service public method), matching the repo's existing spec conventions; full npx playwright test green after; fixtures carry real-shaped domain keys (tenant/account scoping where applicable).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I already wrote the calculation function, write tests for it",
+      "expected_output": "Tests written at the seam, not against internals; expected values taken from an independent source, not recomputed the code's way; no complaint about test-after — tests-with-code is the rule, order is free.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "run the tests in one of the service repos",
+      "expected_output": "Uses npx playwright test (never the watch-mode variant of the test script); runs none first when the repo pins a runtime version.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "fix this bug in the parser and add a regression test",
+      "expected_output": "Reproduction test written and watched to fail BEFORE the fix (the bug-fix exception); after the fix, the test is proven to bite (stash fix, watch fail, restore) rather than assumed to.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "implement PROJ-459",
+      "expected_output": "Routes to feature (the ticket is the route skills' job); testing is loaded by feature for the test part, not instead of it — the session does not start from testing alone.",
+      "files": []
+    }
+  ]
+}
