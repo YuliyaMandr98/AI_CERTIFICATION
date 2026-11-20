@@ -1,4 +1,4 @@
-import { test, expect } from "@fixtures/services.fixture";
+import { test, expect } from "@playwright/test";
 import { UmbracoService } from "@services/umbraco.service";
 import * as allure from "allure-js-commons";
 import { EPIC, STORY } from "@test-data/allure-annotations";

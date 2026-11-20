@@ -1,0 +1,17 @@
+{
+  "name": "qa-api-tests-ai-delegation-demo",
+  "version": "1.0.0",
+  "description": "Минимальный запускаемый срез одного фичевого spec-файла из qa-api-tests, для демонстрации AI-делегирования (задание 20)",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.19.41",
+    "allure-js-commons": "^3.5.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.3.0"
+  }
+}

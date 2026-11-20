@@ -1,6 +1,3 @@
-<!-- RULE: keep this file ≤150 lines. It is an index, not an encyclopedia — details
-     live in data/<service>.md and tasks/<KEY>/; this file only routes to them. Every line
-     here is re-read on every turn of every session, so each one must earn its place. -->
 # qa-cert-wrapper workspace — personal context (NEVER commit anywhere)
 
 ## What this is
