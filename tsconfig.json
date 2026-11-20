@@ -16,6 +16,7 @@
       "@services/*": ["src/services/*"],
       "@models/*": ["src/models/*"],
       "@helpers/*": ["src/helpers/*"],
+      "@fixtures/*": ["src/fixtures/*"],
       "@test-data/*": ["test-data/*"]
     }
   },
